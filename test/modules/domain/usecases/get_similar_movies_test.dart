@@ -18,7 +18,7 @@ void main() {
     releaseDate: 'releaseDate',
   );
 
-  test('should return an entity Movie', () async {
+  test('should return a List of entity SimilarMovie', () async {
     //arrange
     when(() => repository.getSimilarMovies(any()))
         .thenAnswer((value) async => [tSimilarMovie]);

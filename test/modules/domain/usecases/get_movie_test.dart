@@ -17,7 +17,7 @@ void main() {
     voteCount: 3,
   );
 
-  test('should return a List of entity SimilarMovie', () async {
+  test('should return an entity Movie', () async {
     //arrange
     when(() => repository.getMovie(any())).thenAnswer((value) async => tMovie);
 
