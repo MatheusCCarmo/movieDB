@@ -28,7 +28,7 @@ class App extends StatelessWidget {
           color: AppColors.white,
         ),
       ),
-      home: MovieDetailsPage(),
+      initialRoute: '/',
     ).modular();
   }
 }

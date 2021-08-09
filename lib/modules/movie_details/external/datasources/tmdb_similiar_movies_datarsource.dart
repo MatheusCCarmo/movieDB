@@ -9,10 +9,10 @@ class TmdbSimilarMoviesDatasource implements SimilarMoviesDatasource {
 
   TmdbSimilarMoviesDatasource(this.dio);
 
-  final baseUrl = dotenv.env['BASE_URL'];
-  final apiKey = dotenv.env['API_KEY'];
-  // final baseUrl = 'BASE_URL';
-  // final apiKey = 'API_KEY';
+  // final baseUrl = dotenv.env['BASE_URL'];
+  // final apiKey = dotenv.env['API_KEY'];
+  final baseUrl = 'BASE_URL';
+  final apiKey = 'API_KEY';
 
   @override
   Future<List<SimilarMovieModel>> getSimilarMovies(int movieId) async {

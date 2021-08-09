@@ -12,8 +12,16 @@ class MovieDetailsPage extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
-            Container(
-              color: Colors.blue,
+            CustomScrollView(
+              slivers: [
+                SliverFillRemaining(
+                  child: Container(
+                    color: Colors.blue,
+                  ),
+                ),
+                // DetailsMovieHeader(),
+                // DetailsMovieSimilarList(),
+              ],
             ),
             Positioned(
               left: 20,
