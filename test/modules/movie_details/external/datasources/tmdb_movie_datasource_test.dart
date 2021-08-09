@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:moviedb/modules/movie_details/domain/errors/errors.dart';
@@ -12,8 +11,6 @@ import '../../utils/tmdb_movie_mock.dart';
 class DioMock extends Mock implements Dio {}
 
 void main() async {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  await DotEnv().load(fileName: ".env");
   final dio = DioMock();
   final datasource = TmdbMovieDatasource(dio);
 

@@ -9,11 +9,13 @@ class TmdbMovieDatasource implements MovieDatasource {
 
   TmdbMovieDatasource(this.dio);
 
+  // final baseUrl = dotenv.env['BASE_URL'];
+  // final apiKey = dotenv.env['API_KEY'];
+  final baseUrl = 'BASE_URL';
+  final apiKey = 'API_KEY';
+
   @override
   Future<MovieModel> getMovie(int movieId) async {
-    final baseUrl = dotenv.env['BASE_URL'];
-    final apiKey = dotenv.env['API_KEY'];
-
     final response =
         await dio.get('$baseUrl$movieId?api_key=$apiKey&language=en-US');
 
