@@ -54,11 +54,15 @@ class _SimilarMoviesListItemState extends State<SimilarMoviesListItem> {
                     text: TextSpan(children: [
                       TextSpan(
                           text:
-                              '${widget.similarMovie.releaseDate.substring(0, 4)}'),
+                              '${widget.similarMovie.releaseDate.substring(0, 4)} ',
+                          style: TextStyle(
+                            fontSize: 12,
+                          )),
                       TextSpan(
                           text:
                               ' ${controller.genresToText(widget.similarMovie.genreIds)}',
-                          style: TextStyle(color: AppColors.lightGray)),
+                          style: TextStyle(
+                              color: AppColors.lightGray, fontSize: 12)),
                     ]),
                   ),
                 ],
