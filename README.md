@@ -15,8 +15,11 @@ Os dados dos filme foram coletados através da API do [The Movie DB](https://www
 - <b>flutter_dotenv:</b> ^5.0.0
 - <b>flutter_modular:</b> ^3.3.1
 
-## Screenshot
-<img src="https://user-images.githubusercontent.com/43590889/128897358-f19ba3a3-1666-4649-90f0-74771c2ad91e.png" width="360" height="640">
+## Screenshots
+
+<img src="https://user-images.githubusercontent.com/43590889/128907945-365f7e0c-cf00-4fa5-a7e4-e9532a134588.png" width="400" height="800">
+<img src="https://user-images.githubusercontent.com/43590889/128908004-02c796e3-20d0-4e2e-be05-0da671fc73ff.png" width="400" height="800">
+
 
 
 ## Funcionamento
