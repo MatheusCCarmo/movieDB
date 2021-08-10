@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:moviedb/modules/movie_details/domain/errors/errors.dart';
@@ -11,6 +12,8 @@ import '../../utils/tmdb_similar_movies_mock.dart';
 class DioMock extends Mock implements Dio {}
 
 void main() async {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load();
   final dio = DioMock();
   final datasource = TmdbSimilarMoviesDatasource(dio);
   test('should return a List of SimilarMovieModel', () async {

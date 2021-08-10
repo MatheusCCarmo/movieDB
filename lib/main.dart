@@ -6,7 +6,7 @@ import 'package:moviedb/app_module.dart';
 import 'app.dart';
 
 void main() async {
-  await DotEnv().load(fileName: ".env");
+  await dotenv.load(fileName: ".env");
   runApp(
     ModularApp(
       module: AppModule(),

@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 import 'config/app_colors.dart';
-import 'modules/movie_details/presentation/movie_details_page.dart';
 
 class App extends StatelessWidget {
   @override

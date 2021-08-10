@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:moviedb/config/app_colors.dart';
 
+import 'movie_details_similar_list/movie_details_similar_list.dart';
+
 class MovieDetailsPage extends StatelessWidget {
   const MovieDetailsPage({Key? key}) : super(key: key);
 
@@ -14,13 +16,11 @@ class MovieDetailsPage extends StatelessWidget {
           children: [
             CustomScrollView(
               slivers: [
-                SliverFillRemaining(
-                  child: Container(
-                    color: Colors.blue,
-                  ),
-                ),
                 // DetailsMovieHeader(),
-                // DetailsMovieSimilarList(),
+                // SliverFillRemaining(
+                //   child: Container(color: Colors.red),
+                // ),
+                MovieDetailsSimilarList(),
               ],
             ),
             Positioned(
