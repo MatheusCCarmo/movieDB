@@ -2,7 +2,10 @@
 
 Layout de uma página de detalhes do filme, baseado no app TodoMovies.
 
-Feito com Flutter utilizando Clean Architecture
+Feito com Flutter utilizando Clean Architecture e testes.
+
+Os dados dos filme foram coletados através da API do [The Movie DB](https://www.themoviedb.org/). 
+
 
 ## Package Utilizados
 - <b>mocktail:</b> ^0.1.4
