@@ -28,4 +28,4 @@ API_KEY=<<api-key>>
 BASE_URL=<<base-url>>
 ```
 - A BASE_URL utilizada foi http://api.themoviedb.org/3/movie/
-- A API_KEY voce pode obter aqui: [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
+- A API_KEY você pode obter aqui: [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
