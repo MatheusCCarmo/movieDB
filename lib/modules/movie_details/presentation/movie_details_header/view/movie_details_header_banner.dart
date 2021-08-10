@@ -10,7 +10,7 @@ class MovieDetailsHeaderBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      expandedHeight: 350,
+      expandedHeight: 340,
       backgroundColor: AppColors.blackBackground,
       toolbarHeight: 0,
       stretch: true,

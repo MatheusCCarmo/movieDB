@@ -3,7 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:moviedb/config/app_colors.dart';
 import 'package:moviedb/modules/movie_details/presentation/movie_details_header/controllers/movie_controller.dart';
-import 'package:moviedb/modules/movie_details/presentation/movie_details_similar_list/movie_details_similar_list.dart';
+import 'package:moviedb/modules/movie_details/presentation/movie_details_similar_list/view/movie_details_similar_list.dart';
 import 'package:moviedb/modules/utils/controller_status.dart';
 
 import 'movie_details_header/view/movie_details_header_banner.dart';

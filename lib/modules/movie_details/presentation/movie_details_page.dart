@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moviedb/config/app_colors.dart';
 
 import 'movie_details_layout.dart';
-import 'movie_details_similar_list/movie_details_similar_list.dart';
+import 'movie_details_similar_list/view/movie_details_similar_list.dart';
 
 class MovieDetailsPage extends StatelessWidget {
   const MovieDetailsPage({Key? key}) : super(key: key);
