@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:moviedb/config/app_colors.dart';
 import 'package:moviedb/modules/movie_details/presentation/movie_details_header/controllers/movie_controller.dart';
 import 'package:moviedb/modules/movie_details/presentation/movie_details_similar_list/movie_details_similar_list.dart';
 import 'package:moviedb/modules/utils/controller_status.dart';
@@ -39,6 +40,7 @@ class _MovieDetailsLayoutState extends State<MovieDetailsLayout> {
         } else if (controller.status == ControllerStatus.sucess) {
           final movie = controller.movie!;
           return Container(
+            color: AppColors.blackBackground,
             child: CustomScrollView(
               physics: BouncingScrollPhysics(),
               slivers: [
