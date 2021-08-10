@@ -1,6 +1,7 @@
 # MovieDB
 
 Layout de uma página de detalhes do filme, baseado no app TodoMovies.
+
 Feito com Flutter utilizando Clean Architecture
 
 ## Package Utilizados
