@@ -33,5 +33,5 @@ Você deve criar o arquivo .env na raíz do projeto no seguinte formato
 API_KEY=<<api-key>>
 BASE_URL=<<base-url>>
 ```
-- A BASE_URL utilizada foi http://api.themoviedb.org/3/movie/
+- A BASE_URL utilizada foi `http://api.themoviedb.org/3/movie/`
 - A API_KEY você pode obter aqui: [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
