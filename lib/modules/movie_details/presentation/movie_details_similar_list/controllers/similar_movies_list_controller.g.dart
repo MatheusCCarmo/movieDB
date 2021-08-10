@@ -28,13 +28,13 @@ mixin _$SimilarMoviesListController on _SimilarMoviesListController, Store {
   final _$statusAtom = Atom(name: '_SimilarMoviesListController.status');
 
   @override
-  SimilarMovieListStatus get status {
+  ControllerStatus get status {
     _$statusAtom.reportRead();
     return super.status;
   }
 
   @override
-  set status(SimilarMovieListStatus value) {
+  set status(ControllerStatus value) {
     _$statusAtom.reportWrite(value, super.status, () {
       super.status = value;
     });
@@ -53,7 +53,7 @@ mixin _$SimilarMoviesListController on _SimilarMoviesListController, Store {
       ActionController(name: '_SimilarMoviesListController');
 
   @override
-  dynamic setStatus(SimilarMovieListStatus newState) {
+  dynamic setStatus(ControllerStatus newState) {
     final _$actionInfo = _$_SimilarMoviesListControllerActionController
         .startAction(name: '_SimilarMoviesListController.setStatus');
     try {

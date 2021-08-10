@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:moviedb/modules/movie_details/domain/entities/similar_movie.dart';
 import 'package:moviedb/modules/movie_details/presentation/movie_details_similar_list/controllers/similar_movies_list_controller.dart';
+import 'package:moviedb/modules/utils/controller_status.dart';
 
 import 'similar_movies_list_item.dart';
 
@@ -30,15 +31,15 @@ class _MovieDetailsSimilarListState extends State<MovieDetailsSimilarList> {
       child: Container(
         child: Observer(
           builder: (context) {
-            if (controller.status == SimilarMovieListStatus.start) {
+            if (controller.status == ControllerStatus.start) {
               return Center(
                 child: Text('Start'),
               );
-            } else if (controller.status == SimilarMovieListStatus.loading) {
+            } else if (controller.status == ControllerStatus.loading) {
               return Center(
                 child: CircularProgressIndicator(),
               );
-            } else if (controller.status == SimilarMovieListStatus.sucess) {
+            } else if (controller.status == ControllerStatus.sucess) {
               final similarMovies = controller.similarMovies;
               return ListView.builder(
                 shrinkWrap: true,

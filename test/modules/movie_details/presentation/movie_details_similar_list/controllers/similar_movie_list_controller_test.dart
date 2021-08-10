@@ -4,6 +4,7 @@ import 'package:mocktail/mocktail.dart';
 import 'package:moviedb/modules/movie_details/domain/entities/similar_movie.dart';
 import 'package:moviedb/modules/movie_details/domain/usecases/get_similar_movies.dart';
 import 'package:moviedb/modules/movie_details/presentation/movie_details_similar_list/controllers/similar_movies_list_controller.dart';
+import 'package:moviedb/modules/utils/controller_status.dart';
 
 class MockGetSimilarMovies extends Mock implements GetSimilarMovies {}
 
@@ -13,15 +14,16 @@ main() async {
   final usecase = MockGetSimilarMovies();
   final controller = SimilarMoviesListController(usecase);
 
-  test('should return the states in order', () async {
+  test('should return the SimilarMoviesListController states in order',
+      () async {
     when(() => usecase.call(any())).thenAnswer((_) async => <SimilarMovie>[]);
 
-    expect(controller.status, SimilarMovieListStatus.start);
+    expect(controller.status, ControllerStatus.start);
 
     controller.getSimilarMoviesById(1);
-    expect(controller.status, SimilarMovieListStatus.loading);
+    expect(controller.status, ControllerStatus.loading);
 
     await controller.getSimilarMoviesById(1);
-    expect(controller.status, SimilarMovieListStatus.sucess);
+    expect(controller.status, ControllerStatus.sucess);
   });
 }
