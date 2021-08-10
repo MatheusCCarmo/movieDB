@@ -28,36 +28,34 @@ class _MovieDetailsSimilarListState extends State<MovieDetailsSimilarList> {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: Container(
-        child: Observer(
-          builder: (context) {
-            if (controller.status == ControllerStatus.start) {
-              return Center(
-                child: Text('Start'),
-              );
-            } else if (controller.status == ControllerStatus.loading) {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            } else if (controller.status == ControllerStatus.sucess) {
-              final similarMovies = controller.similarMovies;
-              return ListView.builder(
-                shrinkWrap: true,
-                padding: EdgeInsets.all(0),
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: similarMovies.length,
-                itemBuilder: (context, index) {
-                  return SimilarMoviesListItem(
-                      similarMovie: similarMovies[index]);
-                },
-              );
-            } else {
-              return Center(
-                child: Text('Error'),
-              );
-            }
-          },
-        ),
+      child: Observer(
+        builder: (context) {
+          if (controller.status == ControllerStatus.start) {
+            return Center(
+              child: Text('Start'),
+            );
+          } else if (controller.status == ControllerStatus.loading) {
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          } else if (controller.status == ControllerStatus.sucess) {
+            final similarMovies = controller.similarMovies;
+            return ListView.builder(
+              shrinkWrap: true,
+              padding: EdgeInsets.all(0),
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: similarMovies.length,
+              itemBuilder: (context, index) {
+                return SimilarMoviesListItem(
+                    similarMovie: similarMovies[index]);
+              },
+            );
+          } else {
+            return Center(
+              child: Text('Error'),
+            );
+          }
+        },
       ),
     );
   }
