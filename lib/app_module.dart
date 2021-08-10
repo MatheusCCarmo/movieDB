@@ -9,6 +9,7 @@ import 'package:moviedb/modules/movie_details/presentation/movie_details_similar
 import 'modules/movie_details/external/datasources/tmdb_movie_datasource.dart';
 import 'modules/movie_details/external/datasources/tmdb_similiar_movies_datarsource.dart';
 import 'modules/movie_details/infra/repositories/similar_movies_repository_impl.dart';
+import 'modules/movie_details/presentation/movie_details_header/controllers/movie_controller.dart';
 
 class AppModule extends Module {
   @override
@@ -21,6 +22,7 @@ class AppModule extends Module {
         Bind((i) => GetSimilarMovies(i())),
         Bind((i) => GetMovie(i())),
         Bind((i) => SimilarMoviesListController(i())),
+        Bind((i) => MovieController(i())),
       ];
 
   @override

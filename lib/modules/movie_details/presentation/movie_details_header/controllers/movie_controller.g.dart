@@ -24,6 +24,21 @@ mixin _$MovieController on _MovieController, Store {
     });
   }
 
+  final _$isFavoriteAtom = Atom(name: '_MovieController.isFavorite');
+
+  @override
+  bool get isFavorite {
+    _$isFavoriteAtom.reportRead();
+    return super.isFavorite;
+  }
+
+  @override
+  set isFavorite(bool value) {
+    _$isFavoriteAtom.reportWrite(value, super.isFavorite, () {
+      super.isFavorite = value;
+    });
+  }
+
   final _$statusAtom = Atom(name: '_MovieController.status');
 
   @override
@@ -62,9 +77,21 @@ mixin _$MovieController on _MovieController, Store {
   }
 
   @override
+  dynamic toggleIsFavorite() {
+    final _$actionInfo = _$_MovieControllerActionController.startAction(
+        name: '_MovieController.toggleIsFavorite');
+    try {
+      return super.toggleIsFavorite();
+    } finally {
+      _$_MovieControllerActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 movie: ${movie},
+isFavorite: ${isFavorite},
 status: ${status}
     ''';
   }
