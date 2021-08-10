@@ -40,6 +40,7 @@ class _MovieDetailsLayoutState extends State<MovieDetailsLayout> {
           final movie = controller.movie!;
           return Container(
             child: CustomScrollView(
+              physics: BouncingScrollPhysics(),
               slivers: [
                 MovieDetailsHeaderBanner(movie: movie),
                 MovieDetailsHeaderInfo(movie: movie),
