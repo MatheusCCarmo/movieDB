@@ -56,6 +56,7 @@ class _SimilarMoviesListItemState extends State<SimilarMoviesListItem> {
                           text:
                               '${widget.similarMovie.releaseDate.substring(0, 4)} ',
                           style: TextStyle(
+                            color: AppColors.lightGray,
                             fontSize: 12,
                           )),
                       TextSpan(

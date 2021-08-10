@@ -62,7 +62,10 @@ class _MovieDetailsHeaderInfoState extends State<MovieDetailsHeaderInfo> {
                 ),
                 Text(
                   '${controller.formatValue(widget.movie.voteCount)} Likes',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: AppColors.lightGray,
+                    fontSize: 12,
+                  ),
                 ),
                 SizedBox(
                   width: 20,
@@ -76,7 +79,10 @@ class _MovieDetailsHeaderInfoState extends State<MovieDetailsHeaderInfo> {
                 ),
                 Text(
                   '${widget.movie.popularity} View',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                    color: AppColors.lightGray,
+                    fontSize: 12,
+                  ),
                 ),
               ],
             ),
