@@ -22,7 +22,7 @@ Para obter os pacotes utilizados é necessário rodar o seguinte comando na raí
 flutter pub get
 ```
 
-Deve ser criado o arquivo .env na raíz do projeto no seguinte formato
+Você deve criar o arquivo .env na raíz do projeto no seguinte formato
 ```
 API_KEY=<<api-key>>
 BASE_URL=<<base-url>>
